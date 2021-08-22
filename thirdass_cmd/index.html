@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WEAR YOUR MASK</title>
+
+    <script src="aframe-master.min.js"></script>
+    <script src="aframe-ar-nft.js"></script>
+
+    <style>
+      
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+        font-family: sans-serif;
+      }
+     
+    </style>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden;">
+     <div class="arjs-loader"><div>Loading, please wait...</div></div> 
+
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
+      embedded
+      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+
+      <a-nft
+        type="nft"
+        url="thirdass_cmd/pattern-marker"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5">
+
+          <a-entity>
+            <a-box position="-100 10 0" src="facemask.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="10 100 0" src="facemask.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="100 10 0" src="facemask.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="-100 10 -150" src="facemask.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="10 100 -150" src="facemaskjpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+            <a-box position="100 10 -150" src="facemask.jpg" rotation="" color="" shadow="" material="" geometry="" scale="50 5 50"></a-box>
+          </a-entity>
+
+      </a-nft>
+
+
+
+
+ <a-assets>
+        <a-text value="For the best protection against the Delta variant, there are times when we should consider higher quality masks. In certain situations, it’s especially important. The masks that are best at filtering the virus – especially if you can get a snug fit all around your cheeks and nose – are N95 and KN95, along with KF94. However, if you do not have this available, wear an alternative, high-quality well-fitting mask."></a-text>
+        <a-image src="virus1.png"></a-image>
+ </a-assets>
+
+
+
+
+      <a-entity camera></a-entity>
+    </a-scene>
+
+  </body>
+</html>
