@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BUS SCHEDULE</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <style type="text/css">
+    body {
+      font-family: Arial;
+      font-size: 10pt;
+      background-color: white;
+    }
+    table {
+      border: 0px solid #ccc;
+      border-collapse: collapse;
+    }
+    table th {
+      color: #333;
+      font-weight: bold;
+    }
+    table th, table td {
+      padding: 5px;
+      border: 0px;
+
+    }
+
+    .card {
+      width: 1000px;
+      height: 300px;
+      border-radius:  15px;
+      border:  0px solid lightsteelblue;
+      margin:  20px;
+      padding: 20px;
+      float:  left;
+      margin-left: 25vh;
+      margin-top: 20vh;
+    }
+
+    section#first select {
+      padding: 8px;
+      background-color: orange;
+      border-radius: 20px;
+      border: 0px;
+      color: whitesmoke;
+      position: absolute;
+      margin-top: 45vh;
+      margin-left: 57vh;
+    }
+
+    section#second select {
+      padding: 8px;
+      background-color: orange;
+      border-radius: 20px;
+      border: 0px;
+      color: whitesmoke;
+      position: absolute;
+      margin-top: 45vh;
+      margin-left: 105vh;
+    }
+
+     section#third select {
+      padding: 8px;
+      background-color: orange;
+      border-radius: 20px;
+      border: 0px;
+      color: whitesmoke;
+      position: absolute;
+      margin-top: 30vh;
+      margin-left: 150vh;
+    }
+
+    h1 {
+      margin-left: 81vh;
+      margin-top: 4vh;
+      color: orange;
+      font-size: 50px;
+      font-weight: bolder;
+    }
+
+    p {
+      font-weight: bolder;
+      color: royalblue;
+      font-size: 30px;
+      margin-left: 73vh;
+      margin-top: -3vh;
+     }
+
+     section#first h1 {
+      position: absolute;
+      margin-top: 30vh;
+      margin-left: 60vh;
+      color: black;
+      font-size: 20px;
+     }
+
+     section#second h1 {
+      position: absolute;
+      margin-top: 20vh;
+      margin-left: 102vh;
+      color: black;
+      font-size: 20px;
+     }
+
+     section#third h1 {
+      position: absolute;
+      margin-top: 20vh;
+      margin-left: 140vh;
+      color: black;
+      font-size: 20px;
+     }
+
+     img {
+      width: 250px;
+      margin-left: 85vh;
+      position: absolute;
+      margin-top: -1vh;
+     }
+
+     *:focus {
+     outline: none;
+      }
+
+    .background {
+     background-color: gray;
+      }
+
+    .center {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+      }
+
+
+     h2 {
+     position: absolute;
+     margin-left: 120vh;
+     margin-top: 30vh;
+
+     }
+
+     input {
+     position: absolute;
+     margin-left: 126vh;
+     margin-top: 44.5vh;
+     padding: 9px;
+     background-color: orange;
+     border-radius: 20px;
+     border: 0px;
+     position: absolute;
+
+     }
+
+
+     .item-two {
+     color: royalblue;
+     font-weight: bold;
+     font-size: 30px;
+     position: absolute;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     margin: 4px 2px;
+     margin-left: 120vh;
+     margin-top: 35vh;
+
+     }
+
+  </style>
+
+<h1>SHUTTLE BUS</h1>
+<p>SUMMARECON MALL SERPONG</p>
+<img src="bus.png">
+
+
+<section id="first">
+  <h1>Departure To & Time</h1>
+<select name="datas" id="datas">
+    <option value="1">Select</option>
+    <option value="2">SMS - 07.30</option>
+    <option value="3">SMS - 11.00</option>
+    <option value="4">SMS - 15.30</option>
+    <option value="4">SMS - 18.00</option>
+    <option value="3">Fluorite - 07.39</option>
+    <option value="3">Fluorite - 11.09</option>
+    <option value="4">Fluorite- 15.39</option>
+    <option value="5">Fluorite - 18.09</option>
+    <option value="6">Opal - 07.43 </option>
+    <option value="6">Opal - 11.13</option>
+    <option value="6">Opal - 15.43 </option>
+    <option value="6">Opal - 18.13</option>
+    <option value="3">Jasmine - 07.47</option>
+    <option value="3">Jasmine - 11.18</option>
+    <option value="6">Jasmine - 15.48 </option>
+    <option value="6">Jasmine - 18.18 </option>
+    <option value="6">M Town - 07.50 </option>
+    <option value="6">M Town - 11.21 </option>
+    <option value="6">M Town - 15.51</option>
+    <option value="6">M Town - 18.21 </option>
+    <option value="7">Beryl - 07.53</option>
+    <option value="7">Beryl - 11.24</option>
+    <option value="7">Beryl - 15.54</option>
+    <option value="7">Beryl - 18.24</option>
+    <option value="8">Crystal - 07.56</option>
+    <option value="8">Crystal - 11.27</option>
+    <option value="8">Crystal - 15.57</option>
+    <option value="8">Crystal - 18.27</option>
+    <option value="9">Saint Carolus - 07.58</option>
+    <option value="9">Saint Carolus - 11.29</option>
+    <option value="9">Saint Carolus - 15.59</option>
+    <option value="9">Saint Carolus - 18.30</option>
+    <option value="10">Condovillas/Emerald Cove - 08.02</option>
+    <option value="10">Condovillas/Emerald Cove - 11.32</option>
+    <option value="10">Condovillas/Emerald Cove - 16.02</option>
+    <option value="11">Grisea - 08.06</option>
+    <option value="11">Grisea - 11.34</option>
+    <option value="11">Grisea - 16.04</option>
+    <option value="12">Scarlet - 08.09</option>
+    <option value="12">Scarlet - 11.36</option>
+    <option value="12">Scarlet - 16.06</option>
+    <option value="13">Canary - 08.12</option>
+    <option value="13">Canary - 11.38</option>
+    <option value="13">Canary - 16.08</option>
+    <option value="14">Starling - 08.15</option>
+    <option value="14">Starling - 11.40</option>
+    <option value="14">Starling - 16.10</option>
+    <option value="15">Flamingo/Pelican - 08.18</option>
+    <option value="15">Flamingo/Pelican - 11.44</option>
+    <option value="15">Flamingo/Pelican - 16.14</option>
+    <option value="16">Goldfinch - 08.22</option>
+    <option value="16">Goldfinch - 11.48</option>
+    <option value="16">Goldfinch - 16.18</option>
+    <option value="17">TSC - 08.26</option>
+    <option value="17">TSC - 11.50</option>
+    <option value="18">TSC - 16.20</option>
+    <option value="18">Thomson/Tesla - 08.38</option>
+    <option value="18">Thomson/Tesla - 12.02</option>
+    <option value="18">Thomson/Tesla - 16.32</option>
+    <option value="19">Dalton - 08.41</option>
+    <option value="19">Dalton - 12.05</option>
+    <option value="19">Dalton - 16.35</option>
+    <option value="19">Aristoteles - 08.45</option>
+    <option value="19">Aristoteles - 12.08</option>
+    <option value="19">Aristoteles - 16.38</option>
+    <option value="20">Volta - 08.48</option>
+    <option value="20">Volta - 12.10</option>
+    <option value="20">Volta - 16.40</option>
+    <option value="21">Maxwell - 08.51</option>
+    <option value="21">Maxwell - 12.13</option>
+    <option value="21">Maxwell - 16.43</option>
+    <option value="22">Faraday - 08.54</option>
+    <option value="22">Faraday - 12.16</option>
+    <option value="22">Faraday - 16.46</option>
+    <option value="23">Verdi/Vivaldi - 09.01</option>
+    <option value="23">Verdi/Vivaldi - 12.21</option>
+    <option value="23">Verdi/Vivaldi - 16.51</option>
+    <option value="24">Allogio - 09.07</option>
+    <option value="24">Allogio - 12.26</option>
+    <option value="24">Allogio - 16.56</option>
+    <option value="25">Darwin - 09.11</option>
+    <option value="25">Darwin - 12.32</option>
+    <option value="25">Darwin - 17.02</option>
+    <option value="26">Edison - 09.16</option>
+    <option value="26">Edison - 12.36</option>
+    <option value="26">Edison - 17.06</option>
+    <option value="27">Pascal - 09.21</option>
+    <option value="27">Pascal - 12.38</option>
+    <option value="27">Pascal - 17.08</option>
+    <option value="28">Newton - 09.25</option>
+    <option value="28">Newton - 12.40</option>
+    <option value="28">Newton - 17.10</option>
+    <option value="29">SDC - 09.28</option>
+    <option value="29">SDC - 12.43</option>
+    <option value="29">SDC - 17.13</option>
+    <option value="29">SDC - 18.45</option>
+    <option value="30">Dorm UMN - 09.35</option>
+    <option value="30">Dorm UMN - 12.46</option>
+    <option value="30">Dorm UMN - 17.16</option>
+    <option value="30">Emerald - 09.39</option>
+    <option value="30">Emerald - 12.46</option>
+    <option value="30">Emerald - 17.16</option>
+    <option value="31">Topaz/Aquamarine - 09.43</option>
+    <option value="31">Topaz/Aquamarine - 12.51</option>
+    <option value="31">Topaz/Aquamarine - 17.21</option>
+    <option value="32">Chrysocolla - 09.47</option>
+    <option value="32">Chrysocolla - 12.53</option>
+    <option value="32">Chrysocolla - 17.23</option>
+    <option value="33">Garnet - 09.51</option>
+    <option value="33">Garnet - 12.55</option>
+    <option value="33">Garnet - 17.25</option>
+    <option value="34">The Tiara - 09.54</option>
+    <option value="34">The Tiara - 12.57</option>
+    <option value="34">The Tiara - 17.27</option>
+    <option value="35">Saphire/Jade - 09.57</option>
+    <option value="35">Saphire/Jade - 12.59</option>
+    <option value="35">Saphire/Jade - 17.29</option>
+    <option value="35">SMS - 10.05</option>
+    <option value="35">SMS - 13.06</option>
+    <option value="35">SMS - 17.46</option>
+    <option value="35">SMS - 19.00</option>
+</select>
+</section>
+
+
+<body>
+  
+    <h2>Passangers</h2>
+    <div ng-controller="editable">
+    <input type="number" ng-model="lastNo" min="1" max="4" />
+    </div>
+
+<div ng-controller="fruitController">
+      <div class="card" style="background-color:lightyellow;"ng-repeat="eachdata in datas">
+       <div class="item-two" onclick="alert('Thankyou for your order!')">ORDER</div>
+ </div>
+  
+
+</body>
+</html>
